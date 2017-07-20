@@ -1,18 +1,10 @@
+import PropTypes from 'prop-types';
 /**
  * react-native-swiper
  * @author leecade<leecade@163.com>
  */
-import React, { Component, PropTypes } from 'react'
-import {
-  Text,
-  View,
-  ScrollView,
-  Dimensions,
-  TouchableOpacity,
-  ViewPagerAndroid,
-  Platform,
-  ActivityIndicator
-} from 'react-native'
+import React, { Component } from 'react';
+import { Text, View, ScrollView, Dimensions, TouchableOpacity, ViewPagerAndroid, Platform, ActivityIndicator, ViewPropTypes } from 'react-native';
 
 const { width, height } = Dimensions.get('window')
 
@@ -100,7 +92,7 @@ export default class extends Component {
   static propTypes = {
     horizontal: PropTypes.bool,
     children: PropTypes.node.isRequired,
-    style: View.propTypes.style,
+    style: ViewPropTypes.style,
     pagingEnabled: PropTypes.bool,
     showsHorizontalScrollIndicator: PropTypes.bool,
     showsVerticalScrollIndicator: PropTypes.bool,
